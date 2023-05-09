@@ -6,4 +6,4 @@
 * [URL Mappings](url-paths.md)
 
 ## TAS Testing/Deploying Guides 
-* [Hosted Web Core](hosted-webcore)
+* [Hosted Web Core](hosted-webcore.md)
