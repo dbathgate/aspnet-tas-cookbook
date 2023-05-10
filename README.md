@@ -8,3 +8,4 @@
 
 ## TAS Testing/Deploying Guides 
 * [Hosted Web Core](hosted-webcore.md)
+* [Deploying to TAS](deploying.md)
