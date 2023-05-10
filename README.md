@@ -6,7 +6,8 @@
 * [URL Mappings](url-paths.md)
 * [Configuration](configuration.md)
 
-## TAS Testing/Deploying Guides 
+## TAS Testing/Deploying Guides
+* [CF CLI](cf-cli.md)
 * [Hosted Web Core](hosted-webcore.md)
 * [Deploying to TAS](deploying.md)
 
