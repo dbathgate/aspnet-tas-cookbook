@@ -88,3 +88,79 @@ onboarding-redis   p.redis         on-demand-cache                   create succ
 cf bind-service onboardingapp onboarding-redis
 cf restage onboardingapp
 ```
+
+## Using Session Store
+* The Session store works as it did prior to Redis by Calling `Session["key"]` from an aspx page or using `HttpContext.Current.Session`
+
+```csharp
+// setting session values
+Session["str1"] = "Hello";
+
+// retrieving session values
+string str1 = Session["str1"];
+```
+
+## Session Store with complex objects
+
+* If migrating from In-Memory (InProc) session store, the app may not consider if session stored objects are serializable
+* In order for any object to be stored in an external session store, it must be easily converted (serialized) to binary and back to an object
+* Otherwise it won't be able to store the object
+
+### Primitives serialize easily
+* Primitives such as strings, booleans, and number types easily convert to binary, even Lists
+* The following should work:
+
+```csharp
+Session["str1"] = "Hello";
+Session["bool1"] = true;
+Session["int1"] = 3;
+Session["double2"] = 1.3;
+Session["intArray"] = new int[] {1, 2, 3};
+Session["intList"] = new List<int> { 1, 2, 3 };
+```
+
+* The following however will not work because `Book` is an object and not serializable:
+```csharp
+Session["Started"] = new Book { Id = 1, Name = "Using Redis", Author = "Developer" };
+```
+
+* If `Book` were to be annotated with `Serializable` and contained only serializable fields then it would work
+* The below works because Book is annotated with `Serializable` and contains only primitives
+
+```csharp
+using System;
+
+namespace OnboardingApp
+{
+    [Serializable]
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Author { get; set; }
+    }
+}
+```
+
+* If `Book` were to contain a `genres` field that is an object of type `Genres` then `Genres` would also need to be annotated with `Serializable`
+
+ ```csharp
+ using System;
+
+namespace OnboardingApp
+{
+    [Serializable]
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Author { get; set; }
+        public Genres genres { get; set; }
+    }
+
+    [Serializable]
+    public class Genres
+    {
+        public string[] values { get; set; }
+    }
+}
