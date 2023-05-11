@@ -134,3 +134,17 @@ namespace OnboardingApp
     }
 }
 ```
+
+#### Adding a "Catch-All" log statement to `Global.asax`
+
+* Uncaught exceptions go unlogged and becomes difficult to debug issues in TAS
+* Consider added a "catch-all" log statement in `Global.asax` to log any uncaught errors
+
+```csharp
+void Application_Error(object sender, EventArgs e)
+{
+    ILogger<Global> logger = LoggingConfig.LoggingFactory.CreateLogger<Global>();
+
+    logger.LogError(Server.GetLastError(), "Unhandled exception");
+}
+```

@@ -5,6 +5,7 @@
 * [Oracle Driver](oracle-driver.md)
 * [URL Mappings](url-paths.md)
 * [Configuration](configuration.md)
+* [Redis Session Store](redis-session-store.md)
 
 ## TAS Testing/Deploying Guides
 * [CF CLI](cf-cli.md)
