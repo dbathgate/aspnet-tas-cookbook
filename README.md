@@ -1,5 +1,15 @@
 # TAS Cookbook for ASP.NET Framework Applications
 
+## Overview
+
+* The following is a series of guides for deploying ASP.NET Framework apps onto Tanzu Application Service (TAS)
+* See [Dependencies Used](dependencies.md) for a list of Nuget dependencies used through this guide
+
+## Intended For
+
+* ASP.NET Web Forms/MVC, WCF, or SOAP Web Services
+* .NET Frameowk Version: 4.6.2+
+
 ## TAS Preparation Guides
 * [Logging](logging.md)
 * [Oracle Driver](oracle-driver.md)
