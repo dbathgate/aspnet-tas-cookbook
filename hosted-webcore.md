@@ -24,6 +24,7 @@ Enable-WindowsOptionalFeature -Online -All -FeatureName IIS-ASPNET45
 
 ## Running HWC
 
+* Open a PowerShell terminal as **Administrator**
 * Find the directory where the `web.config` exists
 * Pick a port that is not currently in use, try `8080`
 * Run the following command with the port and path to the directory
@@ -44,7 +45,7 @@ Enable-WindowsOptionalFeature -Online -All -FeatureName IIS-ASPNET45
 
 ### Incorrect format error
 
-* If you see the following error
+* If you see the following error when attempting to view the app in a browser
 ```
 Could not load file or assembly 'OnboardingApp' or one of its dependencies. An attempt was made to load a program with an incorrect format.
 ```
@@ -62,14 +63,14 @@ applications:
 
 ### Error Code: `0x800700b7`
 
-* If HWC returns the following error
+* If HWC returns the following error in the terminal
 ```
 HWC Failed to start: return code: 0x800700b7
 ```
 * Then that port is already in use, switch to a different port and try again
 
 ### Error Code: `0x80070005`
-* If HWC returns the following error
+* If HWC returns the following error in the terminal
 ```
 HWC Failed to start: return code: 0x80070005
 ```

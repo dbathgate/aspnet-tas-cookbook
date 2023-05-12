@@ -33,21 +33,21 @@ Console.WriteLine("My Log Message");
 
 #### Install the following packages
 * Base logging library
-```
+```powershell
 PM> Install-Package Microsoft.Extensions.Logging
 ```
 
 * Adds ability to write to Console (STDOUT)
-```
+```powershell
 PM> Install-Package Microsoft.Extensions.Logging.Console
 ```
 
 * Adds ability to write tto `System.Diagnostics.Debug` to assist with local debugging
-```
+```powershell
 PM> Install-Package Microsoft.Extensions.Logging.Debug
 ```
 * **Optional**: Adds ability to write to Event Logs for backwards compatibility
-```
+```powershell
 PM> Install-Package Microsoft.Extensions.Logging.EventLog
 ```
 
@@ -104,8 +104,8 @@ if (ConfigurationManager.AppSettings["useEventLog"] == "true")
 {
     builder.AddEventLog(b =>
     {
-        b.SourceName = "My Source Name";
-        b.LogName = "My App Name";
+        b.SourceName = "MySourceName";
+        b.LogName = "MyAppName";
     });
 }
 ```
