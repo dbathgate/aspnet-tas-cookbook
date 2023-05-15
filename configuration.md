@@ -20,7 +20,7 @@
 ### Install the following Nuget package
 
 ```powershell
-PM> Install-Package Steeltoe.Extensions.Configuration.CloudFoundryBase -Version 2.5.5
+PM> Install-Package Steeltoe.Extensions.Configuration.CloudFoundryBase
 ```
 
 

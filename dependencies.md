@@ -4,8 +4,8 @@ The following is all dependencies used in this guide and what guide references t
 
 | Dependency | Version | Used In |
 | ---------- | ------ | -------- |
-| [Steeltoe.Extensions.Configuration.CloudFoundryBase](https://github.com/SteeltoeOSS/Steeltoe) | 2.5.5 | [Configuration](configuration.md) |
-| [Steeltoe.CloudFoundry.ConnectorBase](https://github.com/SteeltoeOSS/Steeltoe) | 2.5.5 | [Redis Session Store](redis-session-store.md) |
+| [Steeltoe.Extensions.Configuration.CloudFoundryBase](https://github.com/SteeltoeOSS/Steeltoe) | latest | [Configuration](configuration.md) |
+| [Steeltoe.Connector.CloudFoundry](https://github.com/SteeltoeOSS/Steeltoe) | latest | [Redis Session Store](redis-session-store.md) |
 | [Microsoft.Web.RedisSessionStateProvider](https://github.com/Azure/aspnet-redis-providers) | 4.0.1 | [Redis Session Store](redis-session-store.md) |
 | [Microsoft.Extensions.Logging](https://github.com/dotnet/runtime) | latest | [Logging](logging.md) |
 | [Microsoft.Extensions.Logging.Console](https://github.com/dotnet/runtime) | latest | [Logging](logging.md) |

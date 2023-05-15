@@ -21,7 +21,9 @@
 PM> Install-Package Microsoft.Web.RedisSessionStateProvider -Version 4.0.1
 
 # Connection helper for CloudFoundry to discover and bind Redis to the app
-PM> Install-Package Steeltoe.CloudFoundry.ConnectorBase -Version 2.5.5
+PM> Install-Package Steeltoe.Connector.CloudFoundry
+
+#
 ```
 
 ## Add sessionState config to `Web.Release.config`
