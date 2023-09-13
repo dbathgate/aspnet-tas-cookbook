@@ -16,6 +16,7 @@
 * [URL Mappings](url-paths.md)
 * [Configuration](configuration.md)
 * [Redis Session Store](redis-session-store.md)
+* [Sticky Sessions](sticky-sessions.md)
 
 ## Common Patterns
 * [OpenID Connect Authentication](oidc-auth.md)
