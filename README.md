@@ -18,8 +18,9 @@
 * [Redis Session Store](redis-session-store.md)
 * [Sticky Sessions](sticky-sessions.md)
 
-## Common Patterns
+## Common Patterns & Modernizations
 * [OpenID Connect Authentication](oidc-auth.md)
+* [ASP.NET Website to Web Application Migration](website-migration.md)
 
 ## TAS Testing/Deploying Guides
 * [CF CLI](cf-cli.md)
