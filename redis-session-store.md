@@ -22,8 +22,6 @@ PM> Install-Package Microsoft.Web.RedisSessionStateProvider -Version 4.0.1
 
 # Connection helper for CloudFoundry to discover and bind Redis to the app
 PM> Install-Package Steeltoe.Connector.CloudFoundry
-
-#
 ```
 
 ## Add sessionState config to `Web.Release.config`
@@ -43,7 +41,7 @@ PM> Install-Package Steeltoe.Connector.CloudFoundry
 * **NOTE**: This class name and method name is reference in the `Web.config` step above. Changing the name/location needs to be reflected there as well
 ```csharp
 using OnboardingApp.App_Start;
-using Steeltoe.CloudFoundry.Connector.Redis;
+using Steeltoe.Connector.Redis;
 
 namespace OnboardingApp
 {
