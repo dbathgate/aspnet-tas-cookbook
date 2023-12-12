@@ -30,3 +30,4 @@
 ## Troubleshooting
 
 * [System Font Issue](server-side-fonts.md)
+* [Assembly Errors](assembly-errors.md)
