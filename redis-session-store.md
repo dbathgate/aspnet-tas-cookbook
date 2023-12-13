@@ -164,3 +164,15 @@ namespace OnboardingApp
         public string[] values { get; set; }
     }
 }
+```
+
+## Troubleshooting
+
+### AuthenticationException: A call to SSPI failed, see inner exception
+
+* This error usually indicates that the .NET Framework app is trying to use a TLS version older than what Redis allows
+* Changing the HTTP runtime target framework in `web.config` to `4.8` updates the default TLS version
+
+```xml
+<httpRuntime targetFramework="4.8" />
+```
