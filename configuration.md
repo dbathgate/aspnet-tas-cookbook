@@ -119,13 +119,6 @@ string password = ApplicationConfig.Configuration["vcap:services:credhub:0:crede
 #### Updating the CredHub Service
 
  ```bash
-
-# first have to unbind and delete the service
-cf unbind-service onboardingapp db-secret
-cf delete-service db-secret -f
-
-# then recreate the service with the new value and bind it
-cf create-service credhub default db-secret -c '{"password": "secret456"}'
-cf bind-service onboardingapp db-secret
+cf update-service db-secret -c '{"password": "secret789"}'
 cf restage onboardingapp
 ```
