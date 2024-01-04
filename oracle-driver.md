@@ -28,3 +28,11 @@ using Oracle.ManagedDataAccess;
 ```
 
 ## Remove the `Oracle.DataAccess` reference
+
+## Troubleshooting
+
+### `ORA-01882: timezone region not found`
+
+* This error seems to occur when there is a compatibility between the `Oracle.ManagedDataAccess` version and the Oracle database version.
+* Some Internet posts suggest setting [UseHourOffsetForUnsupportedTimezone](https://docs.oracle.com/en/database/oracle/oracle-database/21/odpnt/ConnectionUseHourOffsetForUnsupportedTimezone.html) to `true`. This however resulted in Connection timeouts.
+* If that doesn't work, consider lowering the `Oracle.ManagedDataAccess` version down until the issue is resolved. Version `19.18.0` seems to have resolved this in at least one case.
