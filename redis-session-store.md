@@ -18,7 +18,7 @@
 
 ```powershell
 # Microsoft provided session state provider for Redis
-PM> Install-Package Microsoft.Web.RedisSessionStateProvider -Version 4.0.1
+PM> Install-Package Microsoft.Web.RedisSessionStateProvider
 
 # Connection helper for CloudFoundry to discover and bind Redis to the app
 PM> Install-Package Steeltoe.Connector.CloudFoundry
